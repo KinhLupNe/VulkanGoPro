@@ -1,0 +1,8 @@
+[
+{
+  "directory": "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release",
+  "command": "C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\HostX64\\x64\\cl.exe  /nologo /TP -DGLFW_DLL -external:IC:\\VulkanSDK\\1.4.321.1\\include -external:IC:\\Users\\KinhLup\\vcpkg\\installed\\x64-windows\\include -external:W0 /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd /FoCMakeFiles\\VulkanGoPro.dir\\main.cpp.obj /FdCMakeFiles\\VulkanGoPro.dir\\ /FS -c E:\\IT\\devGame3D\\Vulkan\\VulkanGoPro\\main.cpp",
+  "file": "E:\\IT\\devGame3D\\Vulkan\\VulkanGoPro\\main.cpp",
+  "output": "CMakeFiles\\VulkanGoPro.dir\\main.cpp.obj"
+}
+]

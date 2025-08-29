@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/VulkanGoPro.dir/embed.manifest"

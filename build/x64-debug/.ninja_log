@@ -1,0 +1,11 @@
+# ninja log v7
+2	1242	7781620295033833	CMakeFiles/VulkanGoPro.dir/main.cpp.obj	763c7eba7da9f704
+1244	1808	7781620307510043	VulkanGoPro.exe	eefa3d46da0ca769
+3	1119	7781802037971071	CMakeFiles/VulkanGoPro.dir/main.cpp.obj	763c7eba7da9f704
+1119	1623	7781802049131248	VulkanGoPro.exe	eefa3d46da0ca769
+3	1127	7781819052319083	CMakeFiles/VulkanGoPro.dir/main.cpp.obj	763c7eba7da9f704
+1128	1608	7781819063572089	VulkanGoPro.exe	eefa3d46da0ca769
+2	870	7781823341589447	CMakeFiles/VulkanGoPro.dir/main.cpp.obj	763c7eba7da9f704
+871	1328	7781823350277900	VulkanGoPro.exe	eefa3d46da0ca769
+3	1180	7781830127973218	CMakeFiles/VulkanGoPro.dir/main.cpp.obj	763c7eba7da9f704
+1181	1674	7781830139749634	VulkanGoPro.exe	eefa3d46da0ca769
