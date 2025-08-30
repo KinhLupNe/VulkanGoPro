@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_VulkanGoPro: phony || .
 
 build CMakeFiles\VulkanGoPro.dir\main.cpp.obj: CXX_COMPILER__VulkanGoPro_unscanned_Debug E$:\IT\devGame3D\Vulkan\VulkanGoPro\main.cpp || cmake_object_order_depends_target_VulkanGoPro
   CONFIG = Debug
-  DEFINES = -DGLFW_DLL
+  DEFINES = -DGLFW_DLL -DVULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1 -DVULKAN_HPP_NO_STRUCT_CONSTRUCTORS=1
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd
   INCLUDES = -external:IC:\VulkanSDK\1.4.321.1\include -external:IC:\Users\KinhLup\vcpkg\installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\VulkanGoPro.dir

@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "VulkanGoPro::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-VulkanGoPro-Debug-8dd6b7d6eb40098f5616.json",
+					"jsonFile" : "target-VulkanGoPro-Debug-cee8334130eda131b024.json",
 					"name" : "VulkanGoPro",
 					"projectIndex" : 0
 				}
@@ -49,7 +49,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release",
+		"build" : "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-debug",
 		"source" : "E:/IT/devGame3D/Vulkan/VulkanGoPro"
 	},
 	"version" : 

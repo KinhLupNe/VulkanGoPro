@@ -15,7 +15,8 @@
 		[
 			"_add_executable",
 			"add_executable",
-			"target_link_libraries"
+			"target_link_libraries",
+			"target_compile_definitions"
 		],
 		"files" : 
 		[
@@ -30,7 +31,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 18,
+				"line" : 17,
 				"parent" : 0
 			},
 			{
@@ -42,7 +43,13 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 22,
+				"line" : 26,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 33,
 				"parent" : 0
 			}
 		]
@@ -61,6 +68,14 @@
 				{
 					"backtrace" : 3,
 					"define" : "GLFW_DLL"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "VULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "VULKAN_HPP_NO_STRUCT_CONSTRUCTORS=1"
 				}
 			],
 			"includes" : 
