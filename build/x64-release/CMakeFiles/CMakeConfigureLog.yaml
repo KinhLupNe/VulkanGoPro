@@ -17,17 +17,17 @@ events:
       - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/cl.exe 
+      Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 
       Build flags: 
       Id flags:  
       
       The output was:
       0
-      Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30159 for x64
+      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35215 for x64
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       CMakeCCompilerId.c
-      Microsoft (R) Incremental Linker Version 14.29.30159.0
+      Microsoft (R) Incremental Linker Version 14.44.35215.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       /out:CMakeCCompilerId.exe 
@@ -63,17 +63,17 @@ events:
       - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/cl.exe 
+      Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 
       Build flags: 
       Id flags:  
       
       The output was:
       0
-      Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30159 for x64
+      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35215 for x64
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       CMakeCXXCompilerId.cpp
-      Microsoft (R) Incremental Linker Version 14.29.30159.0
+      Microsoft (R) Incremental Linker Version 14.44.35215.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       /out:CMakeCXXCompilerId.exe 
@@ -109,8 +109,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-q7xk2s"
-      binary: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-q7xk2s"
+      source: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-ssvm5v"
+      binary: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-ssvm5v"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -123,11 +123,11 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-q7xk2s'
+        Change Dir: 'E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-ssvm5v'
         
-        Run Build Command(s): C:/ProgramData/chocolatey/bin/ninja.exe -v cmTC_6b4ad
-        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\HostX64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_6b4ad.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_6b4ad.dir\\ /FS -c "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1929 --intdir=CMakeFiles\\cmTC_6b4ad.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\HostX64\\x64\\link.exe /nologo CMakeFiles\\cmTC_6b4ad.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_6b4ad.exe /implib:cmTC_6b4ad.lib /pdb:cmTC_6b4ad.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): C:/ProgramData/chocolatey/bin/ninja.exe -v cmTC_584e3
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_584e3.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_584e3.dir\\ /FS -c "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_584e3.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_584e3.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_584e3.exe /implib:cmTC_584e3.lib /pdb:cmTC_584e3.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -140,7 +140,7 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'C': C:/PROGRA~1/MICROS~1/2022/COMMUN~1/VC/Tools/MSVC/1429~1.301/bin/HostX64/x64/link.exe
+        linker tool for 'C': C:/PROGRA~1/MICROS~1/2022/COMMUN~1/VC/Tools/MSVC/1444~1.352/bin/Hostx64/x64/link.exe
         implicit libs: []
         implicit objs: []
         implicit dirs: []
@@ -155,8 +155,8 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:3 (project)"
     message: |
-      Running the C compiler's linker: "C:/PROGRA~1/MICROS~1/2022/COMMUN~1/VC/Tools/MSVC/1429~1.301/bin/HostX64/x64/link.exe" "-v"
-      Microsoft (R) Incremental Linker Version 14.29.30159.0
+      Running the C compiler's linker: "C:/PROGRA~1/MICROS~1/2022/COMMUN~1/VC/Tools/MSVC/1444~1.352/bin/Hostx64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35215.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
   -
     kind: "try_compile-v1"
@@ -167,8 +167,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-70fq5a"
-      binary: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-70fq5a"
+      source: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-w0nu9v"
+      binary: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-w0nu9v"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -182,11 +182,11 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-70fq5a'
+        Change Dir: 'E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-w0nu9v'
         
-        Run Build Command(s): C:/ProgramData/chocolatey/bin/ninja.exe -v cmTC_9338a
-        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_9338a.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_9338a.dir\\ /FS -c "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1929 --intdir=CMakeFiles\\cmTC_9338a.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\HostX64\\x64\\link.exe /nologo CMakeFiles\\cmTC_9338a.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_9338a.exe /implib:cmTC_9338a.lib /pdb:cmTC_9338a.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): C:/ProgramData/chocolatey/bin/ninja.exe -v cmTC_55133
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_55133.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_55133.dir\\ /FS -c "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_55133.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_55133.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_55133.exe /implib:cmTC_55133.lib /pdb:cmTC_55133.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -199,7 +199,7 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'CXX': C:/PROGRA~1/MICROS~1/2022/COMMUN~1/VC/Tools/MSVC/1429~1.301/bin/HostX64/x64/link.exe
+        linker tool for 'CXX': C:/PROGRA~1/MICROS~1/2022/COMMUN~1/VC/Tools/MSVC/1444~1.352/bin/Hostx64/x64/link.exe
         implicit libs: []
         implicit objs: []
         implicit dirs: []
@@ -214,13 +214,9 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:3 (project)"
     message: |
-      Running the CXX compiler's linker: "C:/PROGRA~1/MICROS~1/2022/COMMUN~1/VC/Tools/MSVC/1429~1.301/bin/HostX64/x64/link.exe" "-v"
-      Microsoft (R) Incremental Linker Version 14.29.30159.0
+      Running the CXX compiler's linker: "C:/PROGRA~1/MICROS~1/2022/COMMUN~1/VC/Tools/MSVC/1444~1.352/bin/Hostx64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35215.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
-...
-
----
-events:
   -
     kind: "try_compile-v1"
     backtrace:
@@ -232,12 +228,12 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
       - "C:/Users/KinhLup/vcpkg/installed/x64-windows/share/glfw3/glfw3Config.cmake:2 (find_dependency)"
       - "C:/Users/KinhLup/vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
-      - "CMakeLists.txt:15 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-4encxj"
-      binary: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-4encxj"
+      source: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-p96e23"
+      binary: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-p96e23"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -250,13 +246,13 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-4encxj'
+        Change Dir: 'E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-p96e23'
         
-        Run Build Command(s): C:/ProgramData/chocolatey/bin/ninja.exe -v cmTC_a1d10
-        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\HostX64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_a1d10.dir\\src.c.obj /FdCMakeFiles\\cmTC_a1d10.dir\\ /FS -c E:\\IT\\devGame3D\\Vulkan\\VulkanGoPro\\build\\x64-release\\CMakeFiles\\CMakeScratch\\TryCompile-4encxj\\src.c
-        FAILED: [code=2] CMakeFiles/cmTC_a1d10.dir/src.c.obj 
-        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\HostX64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_a1d10.dir\\src.c.obj /FdCMakeFiles\\cmTC_a1d10.dir\\ /FS -c E:\\IT\\devGame3D\\Vulkan\\VulkanGoPro\\build\\x64-release\\CMakeFiles\\CMakeScratch\\TryCompile-4encxj\\src.c
-        E:\\IT\\devGame3D\\Vulkan\\VulkanGoPro\\build\\x64-release\\CMakeFiles\\CMakeScratch\\TryCompile-4encxj\\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+        Run Build Command(s): C:/ProgramData/chocolatey/bin/ninja.exe -v cmTC_71e64
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_71e64.dir\\src.c.obj /FdCMakeFiles\\cmTC_71e64.dir\\ /FS -c E:\\IT\\devGame3D\\Vulkan\\VulkanGoPro\\build\\x64-release\\CMakeFiles\\CMakeScratch\\TryCompile-p96e23\\src.c
+        FAILED: [code=2] CMakeFiles/cmTC_71e64.dir/src.c.obj 
+        C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_71e64.dir\\src.c.obj /FdCMakeFiles\\cmTC_71e64.dir\\ /FS -c E:\\IT\\devGame3D\\Vulkan\\VulkanGoPro\\build\\x64-release\\CMakeFiles\\CMakeScratch\\TryCompile-p96e23\\src.c
+        E:\\IT\\devGame3D\\Vulkan\\VulkanGoPro\\build\\x64-release\\CMakeFiles\\CMakeScratch\\TryCompile-p96e23\\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
         ninja: build stopped: subcommand failed.
         
       exitCode: 2
@@ -270,12 +266,12 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
       - "C:/Users/KinhLup/vcpkg/installed/x64-windows/share/glfw3/glfw3Config.cmake:2 (find_dependency)"
       - "C:/Users/KinhLup/vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
-      - "CMakeLists.txt:15 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-kzsckz"
-      binary: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-kzsckz"
+      source: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-s97e2c"
+      binary: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-s97e2c"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -288,14 +284,14 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-kzsckz'
+        Change Dir: 'E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-s97e2c'
         
-        Run Build Command(s): C:/ProgramData/chocolatey/bin/ninja.exe -v cmTC_d7164
-        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\HostX64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=pthread_create /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_d7164.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_d7164.dir\\ /FS -c E:\\IT\\devGame3D\\Vulkan\\VulkanGoPro\\build\\x64-release\\CMakeFiles\\CMakeScratch\\TryCompile-kzsckz\\CheckFunctionExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1929 --intdir=CMakeFiles\\cmTC_d7164.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\HostX64\\x64\\link.exe /nologo CMakeFiles\\cmTC_d7164.dir\\CheckFunctionExists.c.obj  /out:cmTC_d7164.exe /implib:cmTC_d7164.lib /pdb:cmTC_d7164.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        FAILED: [code=4294967295] cmTC_d7164.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1929 --intdir=CMakeFiles\\cmTC_d7164.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\HostX64\\x64\\link.exe /nologo CMakeFiles\\cmTC_d7164.dir\\CheckFunctionExists.c.obj  /out:cmTC_d7164.exe /implib:cmTC_d7164.lib /pdb:cmTC_d7164.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\HostX64\\x64\\link.exe /nologo CMakeFiles\\cmTC_d7164.dir\\CheckFunctionExists.c.obj /out:cmTC_d7164.exe /implib:cmTC_d7164.lib /pdb:cmTC_d7164.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_d7164.dir/intermediate.manifest CMakeFiles\\cmTC_d7164.dir/manifest.res" failed (exit code 1104) with the following output:
+        Run Build Command(s): C:/ProgramData/chocolatey/bin/ninja.exe -v cmTC_aa1de
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=pthread_create /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_aa1de.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_aa1de.dir\\ /FS -c E:\\IT\\devGame3D\\Vulkan\\VulkanGoPro\\build\\x64-release\\CMakeFiles\\CMakeScratch\\TryCompile-s97e2c\\CheckFunctionExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_aa1de.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_aa1de.dir\\CheckFunctionExists.c.obj  /out:cmTC_aa1de.exe /implib:cmTC_aa1de.lib /pdb:cmTC_aa1de.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: [code=4294967295] cmTC_aa1de.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_aa1de.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_aa1de.dir\\CheckFunctionExists.c.obj  /out:cmTC_aa1de.exe /implib:cmTC_aa1de.lib /pdb:cmTC_aa1de.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_aa1de.dir\\CheckFunctionExists.c.obj /out:cmTC_aa1de.exe /implib:cmTC_aa1de.lib /pdb:cmTC_aa1de.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_aa1de.dir/intermediate.manifest CMakeFiles\\cmTC_aa1de.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: cannot open file 'pthreads.lib'
         ninja: build stopped: subcommand failed.
         
@@ -310,12 +306,12 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
       - "C:/Users/KinhLup/vcpkg/installed/x64-windows/share/glfw3/glfw3Config.cmake:2 (find_dependency)"
       - "C:/Users/KinhLup/vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
-      - "CMakeLists.txt:15 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-1rfxoj"
-      binary: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-1rfxoj"
+      source: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-5udsmj"
+      binary: "E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-5udsmj"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -328,14 +324,14 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-1rfxoj'
+        Change Dir: 'E:/IT/devGame3D/Vulkan/VulkanGoPro/build/x64-release/CMakeFiles/CMakeScratch/TryCompile-5udsmj'
         
-        Run Build Command(s): C:/ProgramData/chocolatey/bin/ninja.exe -v cmTC_8707f
-        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\HostX64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=pthread_create /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_8707f.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_8707f.dir\\ /FS -c E:\\IT\\devGame3D\\Vulkan\\VulkanGoPro\\build\\x64-release\\CMakeFiles\\CMakeScratch\\TryCompile-1rfxoj\\CheckFunctionExists.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1929 --intdir=CMakeFiles\\cmTC_8707f.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\HostX64\\x64\\link.exe /nologo CMakeFiles\\cmTC_8707f.dir\\CheckFunctionExists.c.obj  /out:cmTC_8707f.exe /implib:cmTC_8707f.lib /pdb:cmTC_8707f.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        FAILED: [code=4294967295] cmTC_8707f.exe 
-        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1929 --intdir=CMakeFiles\\cmTC_8707f.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\HostX64\\x64\\link.exe /nologo CMakeFiles\\cmTC_8707f.dir\\CheckFunctionExists.c.obj  /out:cmTC_8707f.exe /implib:cmTC_8707f.lib /pdb:cmTC_8707f.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\HostX64\\x64\\link.exe /nologo CMakeFiles\\cmTC_8707f.dir\\CheckFunctionExists.c.obj /out:cmTC_8707f.exe /implib:cmTC_8707f.lib /pdb:cmTC_8707f.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_8707f.dir/intermediate.manifest CMakeFiles\\cmTC_8707f.dir/manifest.res" failed (exit code 1104) with the following output:
+        Run Build Command(s): C:/ProgramData/chocolatey/bin/ninja.exe -v cmTC_e952c
+        [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=pthread_create /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_e952c.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_e952c.dir\\ /FS -c E:\\IT\\devGame3D\\Vulkan\\VulkanGoPro\\build\\x64-release\\CMakeFiles\\CMakeScratch\\TryCompile-5udsmj\\CheckFunctionExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_e952c.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_e952c.dir\\CheckFunctionExists.c.obj  /out:cmTC_e952c.exe /implib:cmTC_e952c.lib /pdb:cmTC_e952c.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: [code=4294967295] cmTC_e952c.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_e952c.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_e952c.dir\\CheckFunctionExists.c.obj  /out:cmTC_e952c.exe /implib:cmTC_e952c.lib /pdb:cmTC_e952c.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_e952c.dir\\CheckFunctionExists.c.obj /out:cmTC_e952c.exe /implib:cmTC_e952c.lib /pdb:cmTC_e952c.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_e952c.dir/intermediate.manifest CMakeFiles\\cmTC_e952c.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: cannot open file 'pthread.lib'
         ninja: build stopped: subcommand failed.
         
