@@ -24,7 +24,7 @@ const std::vector validationLayers = {"VK_LAYER_KHRONOS_validation"};
 constexpr bool enableValidationLayers = false;
 #else
 constexpr bool enableValidationLayers = true;
-#endif // !DEBUG
+#endif
 
 class HelloTriangleApplication {
 public:
@@ -36,18 +36,20 @@ public:
   }
 
 private:
-  GLFWwindow *window;
-
+  GLFWwindow *window = nullptr;
   vk::raii::Context context;
   vk::raii::Instance instance = nullptr;
   vk::raii::DebugUtilsMessengerEXT debugMessenger = nullptr;
-
   vk::raii::SurfaceKHR surface = nullptr;
-
   vk::raii::PhysicalDevice physicalDevice = nullptr;
   vk::raii::Device device = nullptr;
+  vk::raii::Queue queue = nullptr;
 
-  vk::raii::Queue graphicsQueue = nullptr;
+  vk::raii::SwapchainKHR swapChain = nullptr;
+  std::vector<vk::Image> swapChainImages;
+  vk::Format swapChainImageFormat = vk::Format::eUndefined;
+  vk::Extent2D swapChainExtent;
+  std::vector<vk::raii::ImageView> swapChainImageViews;
 
   std::vector<const char *> requiredDeviceExtension = {
       vk::KHRSwapchainExtensionName, vk::KHRSpirv14ExtensionName,
@@ -56,9 +58,11 @@ private:
 
   void initWindow() {
     glfwInit();
+
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
     glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
-    window = glfwCreateWindow(WIDTH, HEIGHT, "vulkan", nullptr, nullptr);
+
+    window = glfwCreateWindow(WIDTH, HEIGHT, "Vulkan", nullptr, nullptr);
   }
 
   void initVulkan() {
@@ -67,6 +71,7 @@ private:
     createSurface();
     pickPhysicalDevice();
     createLogicalDevice();
+    createSwapChain();
   }
 
   void mainLoop() {
@@ -77,37 +82,40 @@ private:
 
   void cleanup() {
     glfwDestroyWindow(window);
+
     glfwTerminate();
   }
 
   void createInstance() {
-    constexpr vk::ApplicationInfo appInfo{.pApplicationName = "Hello Triangle",
-                                          .pEngineName = "No Engine",
-                                          .engineVersion =
-                                              VK_MAKE_VERSION(1, 0, 0),
-                                          .apiVersion = vk::ApiVersion14};
-    // get required layer
+    constexpr vk::ApplicationInfo appInfo{
+        .pApplicationName = "Hello Triangle",
+        .applicationVersion = VK_MAKE_VERSION(1, 0, 0),
+        .pEngineName = "No Engine",
+        .engineVersion = VK_MAKE_VERSION(1, 0, 0),
+        .apiVersion = vk::ApiVersion14};
+
+    // Get the required layers
     std::vector<char const *> requiredLayers;
     if (enableValidationLayers) {
       requiredLayers.assign(validationLayers.begin(), validationLayers.end());
     }
 
-    // check required layer are sp by vulkan implementation
+    // Check if the required layers are supported by the Vulkan implementation.
     auto layerProperties = context.enumerateInstanceLayerProperties();
-    if (std::ranges::any_of(requiredLayers, [&layerProperties](
-                                                auto const &requiredLayers) {
-          return std::ranges::none_of(
-              layerProperties, [requiredLayers](auto const &layerProperties) {
-                return strcmp(layerProperties.layerName, requiredLayers) == 0;
-              });
-        })) {
-      throw std::runtime_error(
-          "One or more required layers are not supported!");
+    for (auto const &requiredLayer : requiredLayers) {
+      if (std::ranges::none_of(
+              layerProperties, [requiredLayer](auto const &layerProperty) {
+                return strcmp(layerProperty.layerName, requiredLayer) == 0;
+              })) {
+        throw std::runtime_error("Required layer not supported: " +
+                                 std::string(requiredLayer));
+      }
     }
 
-    // Get the required instance extensions from GLFW.
+    // Get the required extensions.
     auto requiredExtensions = getRequiredExtensions();
-    // Check if the required GLFW extensions are supported by the Vulkan
+
+    // Check if the required extensions are supported by the Vulkan
     // implementation.
     auto extensionProperties = context.enumerateInstanceExtensionProperties();
     for (auto const &requiredExtension : requiredExtensions) {
@@ -117,7 +125,7 @@ private:
                 return strcmp(extensionProperty.extensionName,
                               requiredExtension) == 0;
               })) {
-        throw std::runtime_error("Required GLFW extension not supported: " +
+        throw std::runtime_error("Required extension not supported: " +
                                  std::string(requiredExtension));
       }
     }
@@ -129,14 +137,13 @@ private:
         .enabledExtensionCount =
             static_cast<uint32_t>(requiredExtensions.size()),
         .ppEnabledExtensionNames = requiredExtensions.data()};
-
     instance = vk::raii::Instance(context, createInfo);
   }
 
   void setupDebugMessenger() {
-    if (!enableValidationLayers) {
+    if (!enableValidationLayers)
       return;
-    }
+
     vk::DebugUtilsMessageSeverityFlagsEXT severityFlags(
         vk::DebugUtilsMessageSeverityFlagBitsEXT::eVerbose |
         vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning |
@@ -152,6 +159,7 @@ private:
     debugMessenger =
         instance.createDebugUtilsMessengerEXT(debugUtilsMessengerCreateInfoEXT);
   }
+
   void createSurface() {
     VkSurfaceKHR _surface;
     if (glfwCreateWindowSurface(*instance, window, nullptr, &_surface) != 0) {
@@ -209,22 +217,28 @@ private:
       throw std::runtime_error("failed to find a suitable GPU!");
     }
   }
+
   void createLogicalDevice() {
-    // find first index of into queueFamilyProperties that sp graphics
-    std::vector<vk ::QueueFamilyProperties> queueFamilyProperties =
+    std::vector<vk::QueueFamilyProperties> queueFamilyProperties =
         physicalDevice.getQueueFamilyProperties();
 
-    // get the first index into queueFamilyProperties which supports graphics
-    auto graphicsQueueFamilyProperty =
-        std::ranges::find_if(queueFamilyProperties, [](auto const &qfp) {
-          return (qfp.queueFlags & vk::QueueFlagBits::eGraphics) !=
-                 static_cast<vk::QueueFlags>(0);
-        });
-    assert(graphicsQueueFamilyProperty != queueFamilyProperties.end() &&
-           "No graphics queue family found!");
-
-    auto graphicsIndex = static_cast<uint32_t>(std::distance(
-        queueFamilyProperties.begin(), graphicsQueueFamilyProperty));
+    // get the first index into queueFamilyProperties which supports both
+    // graphics and present
+    uint32_t queueIndex = ~0;
+    for (uint32_t qfpIndex = 0; qfpIndex < queueFamilyProperties.size();
+         qfpIndex++) {
+      if ((queueFamilyProperties[qfpIndex].queueFlags &
+           vk::QueueFlagBits::eGraphics) &&
+          physicalDevice.getSurfaceSupportKHR(qfpIndex, *surface)) {
+        // found a queue family that supports both graphics and present
+        queueIndex = qfpIndex;
+        break;
+      }
+    }
+    if (queueIndex == ~0) {
+      throw std::runtime_error(
+          "Could not find a queue for graphics and present -> terminating");
+    }
 
     // query for Vulkan 1.3 features
     vk::StructureChain<vk::PhysicalDeviceFeatures2,
@@ -236,10 +250,11 @@ private:
             {.extendedDynamicState =
                  true} // vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT
         };
+
     // create a Device
     float queuePriority = 0.0f;
     vk::DeviceQueueCreateInfo deviceQueueCreateInfo{
-        .queueFamilyIndex = graphicsIndex,
+        .queueFamilyIndex = queueIndex,
         .queueCount = 1,
         .pQueuePriorities = &queuePriority};
     vk::DeviceCreateInfo deviceCreateInfo{
@@ -249,20 +264,87 @@ private:
         .enabledExtensionCount =
             static_cast<uint32_t>(requiredDeviceExtension.size()),
         .ppEnabledExtensionNames = requiredDeviceExtension.data()};
-    //
+
     device = vk::raii::Device(physicalDevice, deviceCreateInfo);
-    graphicsQueue = vk::raii::Queue(device, graphicsIndex, 0);
+    queue = vk::raii::Queue(device, queueIndex, 0);
+  }
+
+  void createSwapChain() {
+    auto surfaceCapabilities =
+        physicalDevice.getSurfaceCapabilitiesKHR(surface);
+    swapChainImageFormat =
+        chooseSwapSurfaceFormat(physicalDevice.getSurfaceFormatsKHR(surface));
+    swapChainExtent = chooseSwapExtent(surfaceCapabilities);
+    auto minImageCount = std::max(3u, surfaceCapabilities.minImageCount);
+    minImageCount = (surfaceCapabilities.maxImageCount > 0 &&
+                     minImageCount > surfaceCapabilities.maxImageCount)
+                        ? surfaceCapabilities.maxImageCount
+                        : minImageCount;
+    vk::SwapchainCreateInfoKHR swapChainCreateInfo{
+        .surface = surface,
+        .minImageCount = minImageCount,
+        .imageFormat = swapChainImageFormat,
+        .imageColorSpace = vk::ColorSpaceKHR::eSrgbNonlinear,
+        .imageExtent = swapChainExtent,
+        .imageArrayLayers = 1,
+        .imageUsage = vk::ImageUsageFlagBits::eColorAttachment,
+        .imageSharingMode = vk::SharingMode::eExclusive,
+        .preTransform = surfaceCapabilities.currentTransform,
+        .compositeAlpha = vk::CompositeAlphaFlagBitsKHR::eOpaque,
+        .presentMode = chooseSwapPresentMode(
+            physicalDevice.getSurfacePresentModesKHR(surface)),
+        .clipped = true};
+
+    swapChain = vk::raii::SwapchainKHR(device, swapChainCreateInfo);
+    swapChainImages = swapChain.getImages();
+  }
+
+  static vk::Format chooseSwapSurfaceFormat(
+      const std::vector<vk::SurfaceFormatKHR> &availableFormats) {
+    const auto formatIt =
+        std::ranges::find_if(availableFormats, [](const auto &format) {
+          return format.format == vk::Format::eB8G8R8A8Srgb &&
+                 format.colorSpace == vk::ColorSpaceKHR::eSrgbNonlinear;
+        });
+    return formatIt != availableFormats.end() ? formatIt->format
+                                              : availableFormats[0].format;
+  }
+
+  static vk::PresentModeKHR chooseSwapPresentMode(
+      const std::vector<vk::PresentModeKHR> &availablePresentModes) {
+    return std::ranges::any_of(availablePresentModes,
+                               [](const vk::PresentModeKHR value) {
+                                 return vk::PresentModeKHR::eMailbox == value;
+                               })
+               ? vk::PresentModeKHR::eMailbox
+               : vk::PresentModeKHR::eFifo;
+  }
+
+  vk::Extent2D
+  chooseSwapExtent(const vk::SurfaceCapabilitiesKHR &capabilities) {
+    if (capabilities.currentExtent.width !=
+        std::numeric_limits<uint32_t>::max()) {
+      return capabilities.currentExtent;
+    }
+    int width, height;
+    glfwGetFramebufferSize(window, &width, &height);
+
+    return {std::clamp<uint32_t>(width, capabilities.minImageExtent.width,
+                                 capabilities.maxImageExtent.width),
+            std::clamp<uint32_t>(height, capabilities.minImageExtent.height,
+                                 capabilities.maxImageExtent.height)};
   }
 
   std::vector<const char *> getRequiredExtensions() {
     uint32_t glfwExtensionCount = 0;
     auto glfwExtensions =
         glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
-    //
+
     std::vector extensions(glfwExtensions, glfwExtensions + glfwExtensionCount);
     if (enableValidationLayers) {
       extensions.push_back(vk::EXTDebugUtilsExtensionName);
     }
+
     return extensions;
   }
 
@@ -270,16 +352,19 @@ private:
       vk::DebugUtilsMessageSeverityFlagBitsEXT severity,
       vk::DebugUtilsMessageTypeFlagsEXT type,
       const vk::DebugUtilsMessengerCallbackDataEXT *pCallbackData, void *) {
-    std::cerr << "validation layer: type " << to_string(type)
-              << " msg: " << pCallbackData->pMessage << std::endl;
+    if (severity == vk::DebugUtilsMessageSeverityFlagBitsEXT::eError ||
+        severity == vk::DebugUtilsMessageSeverityFlagBitsEXT::eWarning) {
+      std::cerr << "validation layer: type " << to_string(type)
+                << " msg: " << pCallbackData->pMessage << std::endl;
+    }
 
     return vk::False;
   }
 };
-int main() {
-  HelloTriangleApplication app;
 
+int main() {
   try {
+    HelloTriangleApplication app;
     app.run();
   } catch (const std::exception &e) {
     std::cerr << e.what() << std::endl;
